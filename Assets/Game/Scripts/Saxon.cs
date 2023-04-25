@@ -229,7 +229,7 @@ public class Saxon : MonoBehaviour
 
         if(AdCounter > 2)
         {
-            FindObjectOfType<Interstitial>().interstitialplay();
+            //FindObjectOfType<Interstitial>().interstitialplay();
             AdCounter = 0;
         }
     }
