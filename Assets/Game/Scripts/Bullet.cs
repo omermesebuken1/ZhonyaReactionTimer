@@ -19,7 +19,7 @@ public class Bullet : MonoBehaviour
     {
 
         rb = GetComponent<Rigidbody>();
-        rb.AddForce(transform.forward * bulletSpeed);
+        rb.AddForce(-transform.forward * bulletSpeed);
 
     }
 
@@ -30,7 +30,13 @@ public class Bullet : MonoBehaviour
 
         if (other.gameObject.CompareTag("Player"))
         {
-            FindAnyObjectByType<Turret>().playerIsDead = true;
+            //FindAnyObjectByType<Turret>().playerIsDead = true;
+            Destroy(this.gameObject);
+        }
+
+        if (other.gameObject.CompareTag("Wall"))
+        {
+            FindAnyObjectByType<Saxon>().missed = true;
             Destroy(this.gameObject);
         }
 

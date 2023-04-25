@@ -7,6 +7,8 @@ public class Zhonya : MonoBehaviour
     [SerializeField] private BoxCollider boxCollider;
     [SerializeField] private Material[] metarials;
 
+    [SerializeField] private Saxon saxon;
+
     private void Start() {
 
         GetComponent<SkinnedMeshRenderer>().material = metarials[0];
@@ -14,12 +16,12 @@ public class Zhonya : MonoBehaviour
 
     private void Update() {
         
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(saxon.zhonyaBool)
         {
             boxCollider.enabled = false;
             GetComponent<SkinnedMeshRenderer>().material = metarials[1];
         }
-        if(Input.GetKeyUp(KeyCode.Space))
+        if(!saxon.zhonyaBool)
         {
             boxCollider.enabled = true;
             GetComponent<SkinnedMeshRenderer>().material = metarials[0];
