@@ -94,12 +94,12 @@ public class GameManager : MonoBehaviour
 
     public void privacy()
     {
-        Application.OpenURL("https://pages.flycricket.io/ultimate-shut-the-bo/privacy.html");
+        Application.OpenURL("https://omermesebuken.com/mobile-games/zhonya-reaction/privacy-policy");
     }
 
     public void Terms()
     {
-        Application.OpenURL("https://pages.flycricket.io/ultimate-shut-the-bo/terms.html");
+        Application.OpenURL("https://omermesebuken.com/mobile-games/zhonya-reaction/terms-of-use");
     }
 
     public void NoAdsControl()
@@ -115,7 +115,7 @@ public class GameManager : MonoBehaviour
 
     public void openGameCenter()
     {
-        KTGameCenter.SharedCenter().ShowLeaderboard("Reaction Time");
+        KTGameCenter.SharedCenter().ShowLeaderboard("grp.ReactionTime");
     }
 
     private void NoAdsButtonStatus()

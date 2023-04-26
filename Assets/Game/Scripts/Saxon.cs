@@ -209,7 +209,7 @@ public class Saxon : MonoBehaviour
                     highScore = Score;
                     PlayerPrefs.SetFloat("Score", highScore);
                     highScoreText.text = "New High Score!";
-                    KTGameCenter.SharedCenter().SubmitFloatScore(highScore, 3, "Reaction Time");
+                    KTGameCenter.SharedCenter().SubmitFloatScore(highScore, 3, "grp.ReactionTime");
                     
                 }
 
