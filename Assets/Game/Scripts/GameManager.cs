@@ -115,7 +115,7 @@ public class GameManager : MonoBehaviour
 
     public void openGameCenter()
     {
-        KTGameCenter.SharedCenter().ShowLeaderboard("grp.ReactionTime");
+        KTGameCenter.SharedCenter().ShowLeaderboard("zhonyaReactionLeaderboard");
     }
 
     private void NoAdsButtonStatus()
