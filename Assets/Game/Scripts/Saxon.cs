@@ -42,6 +42,7 @@ public class Saxon : MonoBehaviour
 
     private int AdCounter;
 
+    [SerializeField] private Initializeads Initializeads;
 
     private void Start()
     {
@@ -53,6 +54,7 @@ public class Saxon : MonoBehaviour
         {
             PlayerPrefs.SetFloat("Score", 100);
         }
+        
 
         highScoreText.text = "";
         scoreText.text = "";
@@ -122,7 +124,7 @@ public class Saxon : MonoBehaviour
 
     public void Revive()
     {
-
+        
         isDead = false;
         //FindAnyObjectByType<Turret>().playerIsDead = false;
 
@@ -211,6 +213,7 @@ public class Saxon : MonoBehaviour
                     highScoreText.text = "New High Score!";
                     KTGameCenter.SharedCenter().SubmitFloatScore(highScore, 3, "zhonyaReactionLeaderboard");
                     
+                    
                 }
 
                 else
@@ -235,7 +238,7 @@ public class Saxon : MonoBehaviour
 
         if(AdCounter > 2)
         {
-            //FindObjectOfType<Interstitial>().interstitialplay();
+            Initializeads.interstitialplay(); 
             AdCounter = 0;
         }
     }

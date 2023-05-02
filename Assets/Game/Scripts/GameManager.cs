@@ -15,10 +15,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject taptoexitscreen;
     [SerializeField] private GameObject PP;
     [SerializeField] private GameObject TOU;
-    
+    [HideInInspector] public int adCounter;
+
     private void Start() {
 
         NoAdsControl();
+        KTGameCenter.SharedCenter().Authenticate();
         
     }
 
@@ -134,6 +136,9 @@ public class GameManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("NoAds", 1);
     }
+
+    
+    
 
 }
 
